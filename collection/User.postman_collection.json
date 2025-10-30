@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "81cb6e13-7424-4ae3-bc0b-cddb44b59fdd",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5794421"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "{{api_key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"wellington@email.com\",\n    \"password\": \"Senha@Forte123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/auth/v1/signup",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"auth",
+						"v1",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "{{api_key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"wellington@email.com\",\n    \"password\": \"Senha@Forte123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/auth/v1/signup",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"auth",
+						"v1",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "{{api_key}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjZpK0lTN2F6ZjZDUHdWSVUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3RienJ0Y2ZudnhremRhYXd6Ymt5LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI3NzBjMjM0ZS0yN2FlLTQzNTUtOWZhNS0wMTZhMjRjNzM5NmMiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYxMjYwNjk3LCJpYXQiOjE3NjEyNTcwOTcsImVtYWlsIjoid2VsbGluZ3RvbkBlbWFpbC5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsIjoid2VsbGluZ3RvbkBlbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGhvbmVfdmVyaWZpZWQiOmZhbHNlLCJzdWIiOiI3NzBjMjM0ZS0yN2FlLTQzNTUtOWZhNS0wMTZhMjRjNzM5NmMifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc2MTI1NzA5N31dLCJzZXNzaW9uX2lkIjoiZTFjMjViYzItYTkzOC00NDhiLTkxY2UtYTYwZGIyNjNjMzY4IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.xscReEeZG7qzE5bwnnsJVsJIu3NCJY7mn6bUGtdIzms",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"Senha@Alterada123\"\n    // \"user_metadata\": {\n    //     \"name\": \"Joao\"\n    // }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/auth/v1/user",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"auth",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "apikey",
+						"value": "{{api_key}}",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6IjZpK0lTN2F6ZjZDUHdWSVUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3RienJ0Y2ZudnhremRhYXd6Ymt5LnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiI1ZjIzMGVhOS0yZjU3LTRhNGEtOWY2ZS0zMzFiNWIzOWFjZjQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzYwNjYwMDI0LCJpYXQiOjE3NjA2NTY0MjQsImVtYWlsIjoiYWx1bmFAZXhhbXBsZS5jb20iLCJwaG9uZSI6IiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIl19LCJ1c2VyX21ldGFkYXRhIjp7ImVtYWlsIjoiYWx1bmFAZXhhbXBsZS5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGhvbmVfdmVyaWZpZWQiOmZhbHNlLCJzdWIiOiI1ZjIzMGVhOS0yZjU3LTRhNGEtOWY2ZS0zMzFiNWIzOWFjZjQifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJwYXNzd29yZCIsInRpbWVzdGFtcCI6MTc2MDY1NjQyNH1dLCJzZXNzaW9uX2lkIjoiYmQ0NTFlY2ItY2YwOC00ZTBlLTkyZjktODVhZGE5YjE3OGU4IiwiaXNfYW5vbnltb3VzIjpmYWxzZX0.9HZzAVw4nEbR2fF_LFKqZnF__ZE_GsDljoJXbO5RUDo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{path}}/auth/v1/logout",
+					"host": [
+						"{{path}}"
+					],
+					"path": [
+						"auth",
+						"v1",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
